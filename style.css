@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f4f4f4;
+}
+
+#tabuleiro {
+    display: grid; /* Essencial para criar a grade 3x3 */
+    grid-template-columns: repeat(3, 100px); /* 3 colunas de 100px */
+    grid-template-rows: repeat(3, 100px);    /* 3 linhas de 100px */
+    gap: 5px;
+    margin: 20px 0;
+}
+
+.celula {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border: 2px solid #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+    cursor: pointer; /* Indica que é clicável */
+    transition: background-color 0.2s;
+}
+
+.celula:hover {
+    background-color: #ddd;
+}
+
+#mensagem {
+    color: #007bff;
+}
+
+#reiniciar {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
