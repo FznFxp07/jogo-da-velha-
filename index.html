@@ -2,13 +2,19 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jogo da Velha para Feira de Sistemas</title>
     <link rel="stylesheet" href="style.css"> </head>
 <body>
     <h1>Jogo da Velha</h1>
-    <h2 id="mensagem">Jogador X, é a sua vez!</h2>
+    
+    <div id="placar">
+        <span id="placar-x">X: 0</span> 
+        | 
+        <span id="placar-o">O: 0</span>
+    </div>
 
-    <div id="tabuleiro">
+    <h2 id="mensagem"></h2> <div id="tabuleiro">
         <div class="celula" data-linha="0" data-coluna="0"></div>
         <div class="celula" data-linha="0" data-coluna="1"></div>
         <div class="celula" data-linha="0" data-coluna="2"></div>
@@ -22,7 +28,7 @@
         <div class="celula" data-linha="2" data-coluna="2"></div>
     </div>
 
-    <button id="reiniciar">Reiniciar Jogo</button>
+    <button id="reiniciar">Reiniciar Rodada</button>
 
     <script src="script.js"></script> </body>
 </html>

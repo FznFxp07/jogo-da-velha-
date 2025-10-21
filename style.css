@@ -1,40 +1,63 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #f4f4f4;
+    background-color: #f0f8ff; /* Cor de fundo clara */
+    color: #333;
 }
 
+h1 {
+    color: #007bff;
+}
+
+/* Estilo do Placar */
+#placar {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #ffffff;
+}
+#placar-x {
+    color: #007bff; /* Azul para X */
+}
+#placar-o {
+    color: #dc3545; /* Vermelho para O */
+}
+
+/* Layout do Tabuleiro usando CSS Grid */
 #tabuleiro {
-    display: grid; /* Essencial para criar a grade 3x3 */
+    display: grid;
     grid-template-columns: repeat(3, 100px); /* 3 colunas de 100px */
     grid-template-rows: repeat(3, 100px);    /* 3 linhas de 100px */
-    gap: 5px;
+    gap: 5px; /* Espaçamento entre as células */
     margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .celula {
     width: 100px;
     height: 100px;
-    background-color: #fff;
-    border: 2px solid #333;
+    background-color: #ffffff;
+    border: 1px solid #333;
+    border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 48px;
-    cursor: pointer; /* Indica que é clicável */
-    transition: background-color 0.2s;
+    font-size: 60px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.1s;
 }
 
 .celula:hover {
-    background-color: #ddd;
+    background-color: #e9ecef; /* Cor mais clara ao passar o mouse */
 }
 
-#mensagem {
-    color: #007bff;
-}
-
+/* Estilo do botão */
 #reiniciar {
     padding: 10px 20px;
     font-size: 16px;
@@ -43,4 +66,5 @@ body {
     color: white;
     border: none;
     border-radius: 5px;
+    margin-top: 15px;
 }
